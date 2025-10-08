@@ -25,7 +25,9 @@ jobs:
 
       - name: Run tests
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest --maxfail=1 --disable-warnings -q
+
 
       - name: Build Docker image
         run: |

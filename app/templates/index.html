@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to Car Rental Service</h1>
+    <ul>
+        {% for car in cars %}
+        <li>
+            {{ car.name }} - ${{ car.price }}/day
+            <form action="/rent" method="POST">
+                <input type="hidden" name="car_id" value="{{ car.id }}">
+                <button type="submit">Rent</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

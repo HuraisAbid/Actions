@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rent Confirmed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Rental Confirmation</h1>
+    <p>You have rented a {{ car.name }} for ${{ car.price }} per day.</p>
+    <a href="/">Go Back</a>
+</body>
+</html>
+
